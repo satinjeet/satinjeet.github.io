@@ -56,8 +56,8 @@
       this.bind = __bind(this.bind, this);
       this.createClock = __bind(this.createClock, this);
       this.container = document.getElementById("clock");
-      this.container.style.width = "" + (this.dimensions.width + 10) + "px";
-      this.container.style.height = "" + (this.dimensions.height + 10) + "px";
+      this.container.style.width = "" + this.dimensions.width + "px";
+      this.container.style.height = "" + this.dimensions.height + "px";
       dragger = new Drag;
       dragger.init(this.container);
     }
