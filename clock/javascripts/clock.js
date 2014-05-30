@@ -34,7 +34,7 @@
     };
 
     Drag.prototype.move = function(e) {
-      this.element.style.position = 'relative';
+      this.element.style.position = 'absolute';
       this.element.style.top = (e.clientY - this.offY) + 'px';
       return this.element.style.left = (e.clientX - this.offX) + 'px';
     };
@@ -51,24 +51,20 @@
     CanvasH.prototype.container = null;
 
     function CanvasH(dimensions) {
-      var dragger;
+      var body, dragger;
       this.dimensions = dimensions;
       this.bind = __bind(this.bind, this);
-      this.createClock = __bind(this.createClock, this);
-      this.container = document.getElementById("clock");
-      this.container.style.width = "" + this.dimensions.width + "px";
-      this.container.style.height = "" + this.dimensions.height + "px";
-      dragger = new Drag;
-      dragger.init(this.container);
-    }
-
-    CanvasH.prototype.createClock = function() {
       this.element = document.createElement("canvas");
+      this.element.id = "clock";
       this.element.width = this.dimensions.width;
       this.element.height = this.dimensions.height;
+      this.element.style.position = 'absolute';
       this.context = this.element.getContext("2d");
-      return this.container.appendChild(this.element);
-    };
+      body = document.body;
+      body.insertBefore(this.element, body.firstChild);
+      dragger = new Drag;
+      dragger.init(this.element);
+    }
 
     CanvasH.prototype.bind = function(eventName, listener) {
       return this.element.addEventListener(eventName, listener);
@@ -297,13 +293,12 @@
       if (typeof this.options.img === "undefined") {
         this.options.img = "roman";
       }
-      this.init();
+      window.addEventListener("load", this.init);
     }
 
     Clock.prototype.init = function() {
       var a, d;
       window.can = new CanvasH(this.options.dimensions);
-      can.createClock();
       this.backGround = new Image;
       this.backGround.onload = this.readyImage;
       this.backGround.src = this.getImage();

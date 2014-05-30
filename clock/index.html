@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
-    <div id="clock"></div>
+    
     <div class="wrapper">
       <header>
         <h1 class="title">Canvas Clock</h1>
@@ -59,7 +59,7 @@
 </pre>
 <p>The css used for the above clock</p>
 <pre>#clock {
-    position: relative;
+    position: absolute;
     border: 5px solid;
     border-color: rgb(222, 184, 135);
     box-shadow: 2px 5px 5px 2px rgb(120,120,120);
@@ -73,16 +73,15 @@
           <p id="demo"></p>
           
           <script type="text/javascript">
-            window.addEventListener('load', function(){
-              new Clock({
-                  dimensions: 200,  // clock will be dimension x dimension in size
-                  needles: {        // object to customize the hand length for all three hands
-                      minutes: 75,
-                      hour: 60,
-                      seconds: 80 
-                 },
-                 img: "numbers_b"  // custom image to use in the background
-              });
+            new Clock({
+                dimensions: 200,  // clock will be dimension x dimension in size
+                needles: {        // object to customize the hand length for all three hands
+                    minutes: 75,
+                    hour: 60,
+                    seconds: 80 
+               },
+               img: "numbers_b",  // custom image to use in the background
+               insertBefore: "main"
             });
           </script>
           </article>
