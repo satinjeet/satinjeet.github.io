@@ -971,4 +971,10 @@ footer .owner p a {
     border-radius: 50px 0px 50px 0px;
     z-index: 10000;
     overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
