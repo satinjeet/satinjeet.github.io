@@ -1,0 +1,21 @@
+{
+  "name": "codename.linker",
+  "version": "0.0.1",
+  "description": "basic html input constraints",
+  "main": "codename.linker.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp-minify": "0.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:sfeonix/codename.linker.git"
+  },
+  "author": "sfeonix",
+  "license": "ISC"
+}
