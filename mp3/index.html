@@ -1,6 +1,6 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="bower_components/ink/dist/css/ink.min.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/ink/dist/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/Ink/dist/css/ink.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/Ink/dist/css/font-awesome.min.css">
     <style>
         li.active {
             border-bottom: 1px solid #6495ED;
@@ -234,7 +234,7 @@
 
     rehashList();
     renderList();
-    if (meta.index >=0) {
+    if (meta.index >=0 && list.length) {
         index = meta.index;
         playSong(meta.index, meta.playingAt);
 
