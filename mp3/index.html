@@ -205,12 +205,14 @@
         if (player.src == '') {
             playSong(0);
         }
-
+        renderList();
+        updateListState();
     });
 
     repeatButton.addEventListener('click', function() {
         renderList();
         updateListState();
+
     });
 
     save.addEventListener('click', function() {
