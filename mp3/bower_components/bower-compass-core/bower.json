@@ -1,0 +1,23 @@
+{
+  "name": "bower-compass-core",
+  "version": "1.0.2",
+  "homepage": "https://github.com/pedrocorreia/bower-compass-core",
+  "authors": [
+    "Pedro Correia <pedro.a.correia@co.sapo.pt>"
+  ],
+  "description": "A bower package for Chris Eppsteins Compass Core Stylesheets.",
+  "keywords": [
+    "SASS",
+    "Compass",
+    "CSS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "**/.sass-cache",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
