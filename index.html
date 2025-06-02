@@ -1,3 +1,111 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satin - Experiments</title>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+      h1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
 
-echo 'It Works';
+      ul {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+
+      .btn-border {
+        padding: 1rem;
+        margin: 0 1rem 1rem 0;
+        border: 1px solid;
+        border-radius: 5px;
+        text-decoration: none;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        transform: all 0.4s ease;
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -2;
+          left: -50%;
+          top: -150%;
+          width: 200%;
+          height: 400%;
+          background-color: #399953;
+          background-repeat: no-repeat;
+          background-size: 50% 50%, 50% 50%;
+          background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+          background-image: linear-gradient(#399953, #399953),
+            linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33),
+            linear-gradient(#377af5, #377af5);
+          animation: rotate 4s linear infinite;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          left: 3px;
+          top: 3px;
+          width: calc(100% - 6px);
+          height: calc(100% - 6px);
+          background: white;
+          border-radius: 5px;
+          transform: all 0.5s ease;
+        }
+      }
+
+      .btn-border:hover {
+        color: white;
+        transform: scale(1.3, 1.3);
+      }
+
+      .btn-border:hover::after {
+        background-color: #535353;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <img
+        src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3BjbmZmeHRrNml5MjM3ZzR6ODV0cnZhdHEybmV2a24yMXpseTFnaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g79am6uuZJKSc/giphy.gif"
+      />
+      Amm!! My Experiments?
+    </h1>
+    <ul>
+      <li>
+        <a class="btn-border" href="/chip-8"> CHIP-8 Emulator </a>
+      </li>
+      <li>
+        <a class="btn-border" href="/clock"> JS Clock ( LOL, so OLD ) </a>
+      </li>
+    </ul>
+  </body>
+</html>
